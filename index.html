@@ -1,0 +1,40 @@
+<html>
+<head>
+  <title>Non Form</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+    #test{
+      opacity: 0;
+      transition: ease 1s all;
+    }
+    #test.fadeIn{
+      color: blue;
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div id="content">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 well">
+          <p id="test">Lobortis a et ligula class ante rutrum urna ullamcorper consectetur curabitur mauris fermentum scelerisque habitant torquent a egestas justo adipiscing leo aenean hac lobortis mus adipiscing diam natoque.Per a vivamus sem class condimentum a class suspendisse scelerisque suspendisse ullamcorper suscipit mi volutpat habitasse fames odio.Porttitor mollis a venenatis suspendisse cum elit dictumst ut facilisi in vestibulum egestas ut nisi aliquet dignissim facilisi.Vestibulum eget congue adipiscing ullamcorper nisi a adipiscing morbi ultrices a nec suspendisse potenti condimentum neque nibh.</p>
+        </div>
+        <div class="col-sm-6">
+          <button class="btn btn-danger">Hide Content</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+  <script>
+
+    $('.btn').click(function(){
+      $('#test').toggleClass('fadeIn');
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+- Javascript
+- Mengapa langsung ke jquery
+- Coba javascript di console chrome
+- var String, integer, array, object
+- Jquery: Javascript library yang menyederhanakan client-side scripting di html.
+- usage: use CDN
+- jquery example 1 (Show Hide)
+- jquery show options
+- jquery show hide using attributes (addClass, removeClass, css)
+- jquery events in DOM:
+  - click event
+  - submit event
+  - focus event
+  - blur event
+- AJAX : komunikasi browser - server tanpa harus mengirim atau refresh halaman

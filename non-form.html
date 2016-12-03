@@ -1,0 +1,49 @@
+<html>
+<head>
+  <title>Non Form</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+  <div id="content">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 well">
+          <span class="loading">loading....</span>
+          <ul>
+          </ul>
+        </div>
+        <div class="col-sm-6">
+            <button class="btn btn-danger">Load Data</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+  <script>
+    $('.loading').hide();
+
+    var resultData;
+    var loadData = function(){
+      $('.loading').show();
+      $.get('https://assetcdn.kulina.id/web/kulina-product-list.json',function(){
+      })
+      .done(function(result){
+        resultData = JSON.parse(result);
+        
+        $.each(resultData.data,function(index,datakulina){
+          $('.well ul').append('<li><img src="'+datakulina.image.desktop_url+'" width="60px"> <br/>'+datakulina.title+'</li>');
+        })
+
+        $('.loading').hide();
+      })
+    }
+
+    $('.btn').click(function(){
+      loadData();
+    })
+  </script>
+</body>
+</html>
